@@ -1,5 +1,5 @@
-import { Cliente } from './cliente.js';
-import { Impuestos } from './impuestos.js';
+import Cliente from './cliente.js';
+import Impuestos from './impuestos.js';
 
 export default {
     //evento click
