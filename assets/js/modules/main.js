@@ -1,3 +1,6 @@
+import { Cliente } from './modules/cliente.js';
+import { Impuestos } from './modules/impuestos.js';
+
 export default {
     //evento click
     cargaGeneral: () => {
