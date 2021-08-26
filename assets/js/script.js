@@ -1,3 +1,3 @@
-import cargar from '.modules/main.js';
+import cargar from './modules/main.js';
 
 cargar.cargaGeneral();
