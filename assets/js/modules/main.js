@@ -12,15 +12,16 @@ export default {
 
 let calcularImpuestos = () => {
     //registro usuario
-    let nombre = document.getElementById('nombreUsuario');
+    let nombre = document.getElementById('nombreCliente').value;
     let nuevoCliente = new Cliente(nombre);
-    document.getElementById('nombre').innerHTML = nuevoCliente.getNombre;
+    document.getElementById('nombre').innerHTML = nuevoCliente.nombre;
+
     //calcular impuestos
-    let montoBrutoAnual = parseInt(document.getElementById('montoBruto'));
-    let deducciones = parseInt(document.getElementById('deducciones'));
+    let montoBrutoAnual = parseInt(document.getElementById('montoBruto').value);
+    let deducciones = parseInt(document.getElementById('deducciones').value);
     if (montoBrutoAnual && deducciones) {
-        let impuestosPorPagar = new Impuestos(montoBrutoAnual, deducciones);
-        document.getElementById('resultado').innerHTML = impuestosPorPagar.calcularImpuestos();
+        var impuestosPorPagar = new Impuestos(montoBrutoAnual, deducciones);
+        document.getElementById('resultado').innerHTML = impuestosPorPagar.impuesto;
     } else {
         alert('debe ingresar valores lalala');
     }

@@ -1,7 +1,9 @@
+import Impuestos from "./impuestos";
+
 export default class Cliente {
-    constructor(nombre, impuesto) {
+    constructor(nombre) {
         this._nombre = nombre;
-        this._impuesto = impuesto;
+        this._impuesto = Impuestos;
     }
     get nombre() {
         return this._nombre;
@@ -9,9 +11,10 @@ export default class Cliente {
     set nombre(nuevoNombre) {
         this._nombre = nuevoNombre;
     }
-    calcularImpuesto() {
-        return ((montoBrutoAnual - deducciones) * (21 / 100 * x)); //repensar formula
+    get impuesto() {
+        return this._impuesto;
     }
 
 }
+
 console.log('Estoy cargando correctamente cliente');
