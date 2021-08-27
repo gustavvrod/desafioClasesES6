@@ -14,11 +14,11 @@ let calcularImpuestos = () => {
     //registro usuario
     let nombre = document.getElementById('nombreUsuario');
     let nuevoCliente = new Cliente(nombre);
-    document.getElementById('nombre').innerHTML = nuevoCliente;
+    document.getElementById('nombre').innerHTML = nuevoCliente.getNombre();
     //calcular impuestos
-    let montoBrutoAnual = document.getElementById('montoBruto');
-    let deducciones = document.getElementById('deducciones');
-    if (parseInt(montoBrutoAnual) && parseInt(deducciones)) {
+    let montoBrutoAnual = parseInt(document.getElementById('montoBruto'));
+    let deducciones = parseInt(document.getElementById('deducciones'));
+    if (montoBrutoAnual && deducciones) {
         let impuestosPorPagar = new Impuestos(montoBrutoAnual, deducciones);
         document.getElementById('resultado').innerHTML = impuestosPorPagar.calcularImpuestos();
     } else {
