@@ -15,10 +15,6 @@ export default class Impuestos {
     set deducciones(nuevoDeducciones) {
         this._deducciones = nuevoDeducciones;
     }
-    calcularImpuesto() {
-        console.log('this.montoBrutoAnual ' + montoBrutoAnual);
-        return (this.montoBrutoAnual - this.deducciones) * (21 / 100); //repensar formula
-    }
 
 }
 

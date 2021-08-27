@@ -20,8 +20,8 @@ let calcularImpuestos = () => {
     let montoBrutoAnual = parseInt(document.getElementById('montoBruto').value);
     let deducciones = parseInt(document.getElementById('deducciones').value);
     if (montoBrutoAnual && deducciones) {
-        var impuestosPorPagar = new Impuestos(montoBrutoAnual, deducciones);
-        document.getElementById('resultado').innerHTML = impuestosPorPagar.impuesto;
+        this.impuesto = new Impuestos(montoBrutoAnual, deducciones);
+        document.getElementById('resultado').innerHTML = this.impuesto;
     } else {
         alert('debe ingresar valores lalala');
     }
