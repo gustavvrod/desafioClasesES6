@@ -1,5 +1,6 @@
 import Cliente from './cliente.js';
 import Impuestos from './impuestos.js';
+console.log('Estoy cargando correctamente main');
 
 export default {
     //evento click
@@ -8,7 +9,6 @@ export default {
         elBotonCalcularImpuestos.addEventListener('click', calcularImpuestos);
     }
 }
-
 
 let calcularImpuestos = () => {
     //registro usuario

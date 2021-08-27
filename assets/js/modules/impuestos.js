@@ -16,3 +16,4 @@ export default class Impuestos {
         this._deducciones = nuevoDeducciones;
     }
 }
+console.log('Estoy cargando correctamente impuestos');
