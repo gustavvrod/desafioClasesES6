@@ -14,7 +14,7 @@ let calcularImpuestos = () => {
     //registro usuario
     let nombre = document.getElementById('nombreUsuario');
     let nuevoCliente = new Cliente(nombre);
-    document.getElementById('nombre').innerHTML = nuevoCliente.getNombre();
+    document.getElementById('nombre').innerHTML = nuevoCliente.getNombre;
     //calcular impuestos
     let montoBrutoAnual = parseInt(document.getElementById('montoBruto'));
     let deducciones = parseInt(document.getElementById('deducciones'));
