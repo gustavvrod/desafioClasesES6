@@ -13,7 +13,7 @@ export default class Cliente {
     calcularImpuesto() {
         let mBA = this._impuesto.montoBrutoAnual;
         let dD = this._impuesto.deducciones;
-        return ((mBA - dD) * ((21 * 100) / 100)); //repensar formula
+        return ((mBA - dD) * (21 / 100));
     }
 }
 

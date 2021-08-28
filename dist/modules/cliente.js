@@ -34,7 +34,7 @@ var Cliente = /*#__PURE__*/function () {
     value: function calcularImpuesto() {
       var mBA = this._impuesto.montoBrutoAnual;
       var dD = this._impuesto.deducciones;
-      return (mBA - dD) * (21 * 100 / 100); //repensar formula
+      return (mBA - dD) * (21 / 100);
     }
   }]);
 

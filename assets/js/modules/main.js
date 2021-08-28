@@ -19,7 +19,7 @@ let calcularImpuestos = () => {
         let nuevoImpuesto = new Impuestos(montoBrutoAnual, deducciones);
         let nuevoCliente = new Cliente(nombre, nuevoImpuesto);
         document.getElementById('nombre').innerHTML = nuevoCliente.nombre;
-        document.getElementById('resultado').innerHTML = nuevoCliente.calcularImpuesto();
+        document.getElementById('resultado').innerHTML = `${nuevoCliente.nombre} los impuestos a pagar corresponden a la cantidad de: $ ${nuevoCliente.calcularImpuesto()}`;
     } else {
         alert('Debe ingresar valores numericos en los campos Monto Bruto y Deducciones.');
     }
