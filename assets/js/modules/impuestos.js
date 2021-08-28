@@ -15,7 +15,6 @@ export default class Impuestos {
     set deducciones(nuevoDeducciones) {
         this._deducciones = nuevoDeducciones;
     }
-
 }
 
 console.log('Estoy cargando correctamente impuestos');

@@ -1,6 +1,5 @@
 import Cliente from './cliente.js';
 import Impuestos from './impuestos.js';
-console.log('Estoy cargando correctamente main');
 
 export default {
     //evento click
@@ -13,16 +12,19 @@ export default {
 let calcularImpuestos = () => {
     //registro usuario
     let nombre = document.getElementById('nombreCliente').value;
-    let nuevoCliente = new Cliente(nombre);
-    document.getElementById('nombre').innerHTML = nuevoCliente.nombre;
-
     //calcular impuestos
     let montoBrutoAnual = parseInt(document.getElementById('montoBruto').value);
     let deducciones = parseInt(document.getElementById('deducciones').value);
     if (montoBrutoAnual && deducciones) {
-        this.impuesto = new Impuestos(montoBrutoAnual, deducciones);
-        document.getElementById('resultado').innerHTML = this.impuesto;
+        let nuevoImpuesto = new Impuestos(montoBrutoAnual, deducciones);
+        //impuestoPorPagar = new Impuestos(montoBrutoAnual, deducciones);
+        //document.getElementById('resultado').innerHTML = impuestoPorPagar.impuesto;
+        let nuevoCliente = new Cliente(nombre, nuevoImpuesto);
+        document.getElementById('nombre').innerHTML = nuevoCliente.nombre;
+        document.getElementById('resultado').innerHTML = nuevoCliente.calcularImpuesto();
     } else {
-        alert('debe ingresar valores lalala');
+        alert('Debe ingresar valores numericos en los campos Monto Bruto y Deducciones.');
     }
 }
+
+console.log('Estoy cargando correctamente main');
