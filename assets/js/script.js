@@ -1,4 +1,4 @@
-import cargar from './modules/main.js';
+import cargar from '.Desafio-Clases-en-ES6/dist/main.js';
 
 cargar.cargaGeneral();
 

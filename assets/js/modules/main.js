@@ -10,15 +10,13 @@ export default {
 }
 
 let calcularImpuestos = () => {
-    //registro usuario
+    //obtener nombre usuario
     let nombre = document.getElementById('nombreCliente').value;
-    //calcular impuestos
+    //obtener impuestos
     let montoBrutoAnual = parseInt(document.getElementById('montoBruto').value);
     let deducciones = parseInt(document.getElementById('deducciones').value);
     if (montoBrutoAnual && deducciones) {
         let nuevoImpuesto = new Impuestos(montoBrutoAnual, deducciones);
-        //impuestoPorPagar = new Impuestos(montoBrutoAnual, deducciones);
-        //document.getElementById('resultado').innerHTML = impuestoPorPagar.impuesto;
         let nuevoCliente = new Cliente(nombre, nuevoImpuesto);
         document.getElementById('nombre').innerHTML = nuevoCliente.nombre;
         document.getElementById('resultado').innerHTML = nuevoCliente.calcularImpuesto();

@@ -1,0 +1,29 @@
+{
+  "name": "desafio-clases-en-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavvrod/desafioClasesES6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavvrod/desafioClasesES6/issues"
+  },
+  "homepage": "https://github.com/gustavvrod/desafioClasesES6#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.0"
+  },
+  "dependencies": {
+    "core-js": "^2.6.12"
+  }
+}
